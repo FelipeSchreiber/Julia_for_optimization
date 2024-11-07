@@ -1,9 +1,11 @@
 Simple classes of Mathematical Programming and Optimization using Julia
-
-to add package:
+<p>
+to add package:<p>
     - in julia shell:
-        using Pkg
-        Pkg.add("name of the package")
-
+    <ol>
+        <li>using Pkg</li>
+        <li>Pkg.add("name of the package")</li>
+    </ol>
+<p>
 to run:
-    julia .jl
+    <ol>julia .jl</ol>
