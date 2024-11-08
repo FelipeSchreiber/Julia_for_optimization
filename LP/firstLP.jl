@@ -1,8 +1,8 @@
-using JuMP,GLPK 
+using JuMP,GLPK,Gurobi
 
 function run()
     model = Model()
-    set_optimizer(model,GLPK.Optimizer)
+    set_optimizer(model,Gurobi.Optimizer)
 
     #declare variables
     p1 = @variable(model,lower_bound=0)
