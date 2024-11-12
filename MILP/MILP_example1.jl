@@ -3,6 +3,20 @@ using JuMP, GLPK
 function run()
     model = Model()
     set_optimizer(model, GLPK.Optimizer)
+
+    #solve the problem
+    set_optimizer_attribute(model, "msg_lev", GLPK.GLP_MSG_ON)
+    set_optimizer_attribute(model, "tm_lim", 5)
+
+    #GAP
+    #GLPK     set_optimizer_attribute(model, "mip_gap", 0.001)
+    #Gurobi   set_optimizer_attribute(model, "MIPGap", 0.001)
+    #Cbc      set_optimizer_attribute(model, "allowableGap", 0.001)
+
+    #Time lime
+    #GLPK     set_optimizer_attribute(model, "tm_lim", 60*30)
+    #Gurobi   set_optimizer_attribute(model, "TimeLime", 60*30)
+    #Cbc      set_optimizer_attribute(model, "Sec", 60*30)
     
     #declare set
     meals = ["A", "B", "C"]
