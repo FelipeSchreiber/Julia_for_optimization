@@ -1,0 +1,5 @@
+To install couenne:
+julia
+using Pkg
+Pkg.add("AmplNLWriter")
+Pkg.add("Couenne_jll")
